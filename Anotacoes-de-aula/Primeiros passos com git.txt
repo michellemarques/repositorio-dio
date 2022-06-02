@@ -1,0 +1,23 @@
+Baixar um diretório do GitHub para sua máquina
+
+
+1- Depois de ter criado o repositório no site do GitHub, ir em code e escolher a melhor
+a melhor opção. Neste exemplo foi o HTTP.
+2- Após, abrir o GitBash na pasta onde ficara(ão) o(s) arquivo(s) baixados.
+3- Executar o git init para iniciar um repositório local. 
+4- Após, executar o seguinte comando para copiar os aquivos que estão na nuvem:
+  git clone <link copiado de code>
+
+Dando tudo certo, o donwload dos arquivos acontecerá.
+É possível verificar sempre o status do processo através do comando: git status.
+
+-------------------------------------------------------------
+Em caso de alterações do projeto no servidor local, os seguintes passos serão 
+necessários para transferir os arquivos da sua máquina para nuvem:
+
+1- git add * -> Adicionará todos os arquivos.
+2- git commit -m"<mensagem>" -> commit onde você deverá descrever as
+mudanças que realizou.
+3- git push origin main -> "Empurra" os arquivos para núvem (GitHub).
+
+É possível sempre verificar o status dos processos através do comando: git status.
