@@ -1,2 +1,2 @@
-# Repositório teste da DIO
+# Repositório DIO
 Desafio de projeto Git/Github da DIO
