@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+    <style>
+        .flex-container {
+            max-width: 500px;
+            border: 2px solid #cacaca;
+            display: flex;
+        }
+
+        .item {
+            background-color: coral;
+            margin: 5px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .bauto{
+           flex-basis: auto; 
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+        .b-0{
+            flex-basis: 0;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>basis: auto</h1>
+    <div class="flex-container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-1">BBB</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-2">DEF</div>
+    </div>
+
+    <h1>basis: 0</h1>
+    <div class="flex-container">
+        <div class="item b-0 fg-1">AAAAAA</div>
+        <div class="item b-0 fg-1">BBB</div>
+        <div class="item b-0 fg-1">C</div>
+        <div class="item b-0 fg-1">DEF</div>
+    </div>
+
+    <h1>basis + width</h1>
+    <div class="flex-container">
+        <div class="item w100 fg-2">AA</div>
+        <div class="item w100 fg-2">BBB</div>
+        <div class="item w100 fg-2">CCC</div>
+        <div class="item w100 fg-2">DEF</div>
+    </div>
+
+</body>
+</html>
