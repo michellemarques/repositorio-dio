@@ -1,0 +1,10 @@
+Estrutura de dados
+-------------------
+
+
+Tipos primitivos (não possuem métodos) => numbers, string, boolean, null undefined.
+( pular linhas = \n  - strings  -> use tamplate strings tbm)
+
+
+Tipos não primitivos => objects e arrays.
+

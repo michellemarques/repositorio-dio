@@ -21,3 +21,4 @@ mudanças que realizou.
 3- git push origin main -> "Empurra" os arquivos para núvem (GitHub).
 
 É possível sempre verificar o status dos processos através do comando: git status.
+
