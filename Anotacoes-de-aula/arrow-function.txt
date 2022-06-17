@@ -1,0 +1,8 @@
+Algumas restrições:
+
+
+- "This" sempre será objeto global. Métodos para modificar seu valor não irão funcionar.
+
+- Não existe o objeto 'arguments'.
+
+- O constructor (ex.: new MeuObjeto()) também não pode ser utilizado

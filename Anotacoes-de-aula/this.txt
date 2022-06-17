@@ -1,0 +1,31 @@
+Sempre que uma função está dentro de um objeto, ela é chamada de MÉTODO.
+
+Quando se usa o THIS dentro do método, o THIS refere-se ao objeto paidesse método. No exemplo abaixo o THIS refere-se a pessoa.
+
+const pessoa = {
+    firstName: 'André',
+    lastName: 'Soares',
+    id: 1,
+    fullName: function() {
+        return this.firstName + ' ' + this.lastName;
+    },
+    getId: function() {
+        return this.id;
+    } 
+};
+
+console.log(pessoa.fullName());
+// André Soares
+console.log(pessoa.getId());
+// 1
+
+---------------------------------
+
+contexto         Referência
+
+Em um obj  | Prórpio obj do dono do metodo
+Sozinha    | Obj global(em navegadores, window)
+Função     | Obj global
+Evento     | Elemento que recebeu o evento
+
+------------------------------------------
