@@ -1,0 +1,16 @@
+Assincronicidade
+
+Definição:
+
+Assíncrono => Que não ocorre ou não se efetiva
+ao mesmo tempo.
+
+JS roda de maneira síncrona.
+
+Promises
+(Objeto de processamento assíncrono)
+
+Definição:
+Inicialmente, seu valor é desconhecido. Ela pode então,
+ser resolvida ou rejeitada. Os estados de uma promise:
+pending (pendente), fulfilled (completo) e reject (rejeitado).
