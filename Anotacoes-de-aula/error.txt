@@ -1,0 +1,18 @@
+Tratando os erros
+
+1- diferenças entre trhow e return
+
+.trhow = trata como um erro.
+.return = trata como o que quer que seja definido.
+
+2- try/ catch
+
+Dentro do try verifica-se um bloco do código e se esse
+código tiver algum tipo de erro, ele será tatado no catch.
+No catch é possível tratar o erro de maneira mais
+organizada.
+
+3 - finally
+
+Pode ser chamado independente de haver erros.
+ele virá abaixo do catch.
