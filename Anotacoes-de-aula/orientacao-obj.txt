@@ -1,0 +1,22 @@
+Orientação a Objetos
+
+Os programas são "objetos" que possuem uma série
+de propriedades.
+
+Paradigmas:
+
+Imperative e Declarative
+
+Pilares: 
+
+- Herança - (O obj filho herda propriedades e métodos
+do obj pai).
+
+- Polimorfismo - (Objs podem herdar a mesma classe pai,
+mas se comportarem de forma diferente quando
+invocamos seus métodos).
+
+- Encapsulamento - (Cada classe tem propriedades e
+métodos independentes do restante do código).
+
+- Abstração - (ex.: coelho ->  animal -> ser vivo)

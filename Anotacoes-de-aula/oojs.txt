@@ -1,0 +1,22 @@
+OOJS (Orientação a Objetos JavaScript)
+
+Protótipos:
+  Todos os objetos JS herdam propriedades e métodos
+de um prototype. O objeto Object.prototype está no
+topo da cadeia.
+
+Classes
+
+ Syntatic sugar: uma sintaxe feita para facilitar a escrita.
+
+class Meal {
+    constructot(food){
+        this.food = food;
+    }
+
+    eat() {
+        return ':P';
+    }
+};
+
+  O JS não possui classes nativamente. Todas as classes são objetos e heranças se dão por protótipos.
