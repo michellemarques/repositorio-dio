@@ -1,0 +1,38 @@
+-> instalar o Node;
+-> tsc, o compilador typescript (npm install -g typescript)
+-> iniciar o npm (npm i ou npm init);
+-> instalar o pct parcel (npm i parcel-bundler);
+-> iniciar o parcel (npm start);
+-> criar um arquivo .gitignore e adicionar o que for necessário.
+
+* Os arquivos typescript terão a extensão " .ts ".
+-------------------------------------------------------------
+
+Interfaces
+Interfaces, nas palavras mais simples, descrevem a estrutura do objeto, o que significa que descreve como o objeto deve se parecer. Dentro TypeScript, podemos trabalhar com “Interfaces”. No TypeScript, uma interface contém apenas a definição de métodos e propriedades, não sua implementação. É a funcionalidade da classe que realiza a conexão entre a interface fornecendo a conexão com todos os parâmetros da interface.
+Ex.:
+
+interface IPessoa {
+  nome: string;
+  idade: number;
+  email: string;
+  telefone: number;
+  sexo? : 'F' | 'M';  -> "?" quando o parâmetro é opcional.
+}
+
+* É possível extender a interface usando 'extends' (como em classes construtoras.)
+
+* https://www.typescriptlang.org/pt/play#example/types-vs-interfaces
+
+
+Types
+Ex.:
+
+type Pessoa = {
+  nome: string;
+  idade: number;
+};
+ 
+function greet(pessoa: Pessoa) {
+  return "Oi " + persoa.nome;
+}

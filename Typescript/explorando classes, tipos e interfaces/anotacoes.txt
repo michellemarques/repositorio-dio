@@ -1,5 +1,0 @@
--> instalar o Node;
--> iniciar o npm (npm i ou npm init);
--> instalar o pct parcel (npm i parcel-bundler);
--> iniciar o parcel (npm start);
--> criar um arquivo .gitignore e adicionar o que for necessário.

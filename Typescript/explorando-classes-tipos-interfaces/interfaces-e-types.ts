@@ -1,10 +1,5 @@
-/* function soma (a: number, b: number){
-    return a + b;
-}; */
 
-// Types e Interfaces
-/* // Interfaces
-
+ // Interfaces
 interface IAnimal {
     nome: string;
     tipo: 'terrestre' | 'aquatico';
@@ -22,16 +17,17 @@ const animal: IAnimal = {
     executarRugido: (alturaEmDecibeis) => (`${alturaEmDecibeis}db`)
 };
 
-animal.executarRugido('15'); // dá erro
+animal.executarRugido(15); // dá erro se for string
 
 const felino: IFelinos = {
     nome:'Leão',
     tipo:  'terrestre',
-    visaoNoturna: true
-}; */
+    visaoNoturna: true,
+    executarRugido: (alturaEmDecibeis) => (`${alturaEmDecibeis}db`)
+};
 
 
-// Types
+/* // Types
 type IAnimal = {
     nome: string;
     tipo: 'terrestre' | 'aquatico';
@@ -54,4 +50,4 @@ const animal: IDomestico = {
     tipo: 'terrestre',
     porte: 'm',
     visaoNoturna: true 
-}
+} */
