@@ -1,0 +1,6 @@
+- instalar o npm (npm init)
+- instalar typescript como dev-dependência (npm install --save-dev typescript)
+- instalar lite-server
+(desinstalar um pacote npm uninstall < nome >)
+- no terminal: tsc --init (cria o arquivo tsconfig.json)
+- no terminal (npm run watch) compila o ts escrito (app.ts) gerando um arquivo de mesmo nome em JS
