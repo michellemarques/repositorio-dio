@@ -6,15 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { Error404Component } from './error-404/error-404.component';
 import { CourseModule } from './courses/course.module';
 import { CoreModule } from './core/component/nav-bar/core.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Error404Component,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +23,6 @@ import { CoreModule } from './core/component/nav-bar/core.module';
 
       {
         path: '', redirectTo: 'courses', pathMatch: 'full'  /* path: '' = raiz */
-      },
-      {
-        path: '**', component: Error404Component /* path: '**' = qdo ñ encontra rota*/
       }
     ])
   ],
