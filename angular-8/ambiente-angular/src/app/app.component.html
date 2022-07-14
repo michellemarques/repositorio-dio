@@ -1,0 +1,14 @@
+<h1 class="text-primary text-center">Angular Diretivas</h1>
+<hr>
+<!-- Diretivas de Atributos -->
+<div class="container" [ngStyle]="{ background: count < 5 ? 'red' : 'green' }" 
+[ngClass]="{ custom: count > 5 }">
+  <h2 class="text-center">Contador: {{count}} </h2>
+</div>
+
+<!-- Diretivas de Estruturais -->
+<h2 class="text-center" *ngIf="count > 7; else menor" >O contador passou de 7.</h2>
+
+<ng-template #menor>
+  <h2 class="text-center">O contador é menor que  7.</h2>
+</ng-template>
