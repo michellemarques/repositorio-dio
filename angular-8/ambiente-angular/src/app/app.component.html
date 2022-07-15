@@ -1,14 +1,69 @@
 <h1 class="text-primary text-center">Angular Diretivas</h1>
 <hr>
 <!-- Diretivas de Atributos -->
-<div class="container" [ngStyle]="{ background: count < 5 ? 'red' : 'green' }" 
-[ngClass]="{ custom: count > 5 }">
+<div class="container" [ngStyle]="{ background: count < 5 ? 'red' : 'green' }" [ngClass]="{ custom: count > 5 }">
   <h2 class="text-center">Contador: {{count}} </h2>
 </div>
 
-<!-- Diretivas de Estruturais -->
-<h2 class="text-center" *ngIf="count > 7; else menor" >O contador passou de 7.</h2>
+<!-- Diretivas de Estruturais (*ngIf) -->
+<h2 class="text-center" *ngIf="count > 7; else menor">O contador passou de 7.</h2>
 
 <ng-template #menor>
-  <h2 class="text-center">O contador é menor que  7.</h2>
+  <h2 class="text-center">O contador é menor que 7.</h2>
 </ng-template>
+
+<!-- Diretivas de Estruturais ([ngSwitch]) -->
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3 text-center">
+  <li class="list-group-item" *ngSwitchCase="3">
+    É igual a 3.
+  </li>
+  <li class="list-group-item" *ngSwitchCase="5">
+    É igual a 5.
+  </li>
+  <li class="list-group-item" *ngSwitchCase="8">
+    É igual a 8.
+  </li>
+  <li class="list-group-item" *ngSwitchDefault="">
+    Esse é o default.
+  </li>
+</ul>
+
+<!-- Diretivas de Estruturais (ngFor) -->
+
+<ul class="list-group mx-auto my-3 col-3 text-center">
+  <li class="list-group-item" *ngFor="let pessoa of pessoas">
+    O nome da pessoa é {{pessoa.nome}} {{pessoa.sobrenome}}.
+  </li>
+</ul>
+
+<ul class="list-group mx-auto my-3 col-3 text-center">
+  <ng-template ngFor let-i [ngForOf]="pessoas">
+    <li class="list-group-item" >
+      O nome da pessoa é {{ i.nome }} {{ i.sobrenome }}.
+    </li>
+  </ng-template>
+</ul>
+
+<!-- enviar dados do .ts para template e vice-versa -->
+
+<hr>
+<div class="col-4 mx-auto my-3">
+  <h3 class="">{{nome}}</h3>
+  <button class="btn btn-success col-4 max-auto" (click)="clicou('Ana Maria')">Clique</button>
+</div>
+
+  <!-- Two way data binding -->
+
+  <hr>
+  <div class="col-4 mx-auto m-4">
+    <input type="text" class="form-control" placeholder="Digite aqui" [(ngModel)]="text">
+    <h4>Saída: {{ text }} </h4>
+  </div>
+
+    <!-- directive -->
+    <div class="col-4 mx-auto my3">
+      <h3 appMarcaTexto corDeFundo="blue" corDoTexto="black">{{nome}}</h3>
+      <h2 class="text-center" appMarcaTexto corDeFundo="red" corDoTexto="blue">Angular Diretivas</h2>
+
+    </div>
