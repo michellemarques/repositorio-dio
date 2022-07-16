@@ -31,19 +31,25 @@
 
 <!-- Diretivas de Estruturais (ngFor) -->
 
-<ul class="list-group mx-auto my-3 col-3 text-center">
+<!-- <ul class="list-group mx-auto my-3 col-3 text-center">
   <li class="list-group-item" *ngFor="let pessoa of pessoas">
-    O nome da pessoa é {{pessoa.nome}} {{pessoa.sobrenome}}.
+    O nome da pessoa é {{pessoa.firstName}} {{pessoa.lastName}} e tem {{pessoa.age}} anos.
   </li>
 </ul>
 
 <ul class="list-group mx-auto my-3 col-3 text-center">
   <ng-template ngFor let-i [ngForOf]="pessoas">
     <li class="list-group-item" >
-      O nome da pessoa é {{ i.nome }} {{ i.sobrenome }}.
+      O nome da pessoa é {{ i.firstName }} {{ i.lastName }} e tem {{i.age}} anos.
     </li>
   </ng-template>
-</ul>
+</ul> -->
+
+<!-- Service -->
+<!-- 
+  Foi substituído pela lista acima 
+-->
+<app-list-people></app-list-people>
 
 <!-- enviar dados do .ts para template e vice-versa -->
 
@@ -67,3 +73,6 @@
       <h2 class="text-center" appMarcaTexto corDeFundo="red" corDoTexto="blue">Angular Diretivas</h2>
 
     </div>
+
+    <h2>Listagem de personagens Rick anda Morty</h2>
+    <app-list-api></app-list-api>
