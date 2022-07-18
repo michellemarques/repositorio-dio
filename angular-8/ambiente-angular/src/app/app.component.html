@@ -1,7 +1,7 @@
 <h1 class="text-primary text-center">Angular Diretivas</h1>
 <hr>
 <!-- Diretivas de Atributos -->
-<div class="container" [ngStyle]="{ background: count < 5 ? 'red' : 'green' }" [ngClass]="{ custom: count > 5 }">
+<!-- <div class="container" [ngStyle]="{ background: count < 5 ? 'red' : 'green' }" [ngClass]="{ custom: count > 5 }">
   <h2 class="text-center">Contador: {{count}} </h2>
 </div>
 
@@ -10,11 +10,11 @@
 
 <ng-template #menor>
   <h2 class="text-center">O contador é menor que 7.</h2>
-</ng-template>
+</ng-template> -->
 
 <!-- Diretivas de Estruturais ([ngSwitch]) -->
 
-<ul [ngSwitch]="count" class="list-group mx-auto col-3 text-center">
+<!-- <ul [ngSwitch]="count" class="list-group mx-auto col-3 text-center">
   <li class="list-group-item" *ngSwitchCase="3">
     É igual a 3.
   </li>
@@ -27,7 +27,7 @@
   <li class="list-group-item" *ngSwitchDefault="">
     Esse é o default.
   </li>
-</ul>
+</ul> -->
 
 <!-- Diretivas de Estruturais (ngFor) -->
 
@@ -59,20 +59,26 @@
   <button class="btn btn-success col-4 max-auto" (click)="clicou('Ana Maria')">Clique</button>
 </div>
 
-  <!-- Two way data binding -->
+<!-- Two way data binding -->
 
-  <hr>
-  <div class="col-4 mx-auto m-4">
-    <input type="text" class="form-control" placeholder="Digite aqui" [(ngModel)]="text">
-    <h4>Saída: {{ text }} </h4>
-  </div>
+<hr>
+<!-- <div class="col-4 mx-auto m-4">
+  <input type="text" class="form-control" placeholder="Digite aqui" [(ngModel)]="text">
+  <h4>Saída: {{ text }} </h4>
+</div> -->
 
-    <!-- directive -->
-    <div class="col-4 mx-auto my3">
-      <h3 appMarcaTexto corDeFundo="blue" corDoTexto="black">{{nome}}</h3>
-      <h2 class="text-center" appMarcaTexto corDeFundo="red" corDoTexto="blue">Angular Diretivas</h2>
+<!-- directive -->
+<div class="col-4 mx-auto my3">
+  <h3 appMarcaTexto corDeFundo="blue" corDoTexto="black">{{nome}}</h3>
+  <h2 class="text-center" appMarcaTexto corDeFundo="red" corDoTexto="blue">Angular Diretivas</h2>
 
+</div>
+
+<div class="container my-5">
+  <div class="row d-flex align-items-center justify-content-center">
+    <h2 class="text-center">Listagem de personagens Rick anda Morty</h2>
+    <div class="col-12">
+      <app-list-api></app-list-api>
     </div>
-
-    <h2>Listagem de personagens Rick anda Morty</h2>
-    <app-list-api></app-list-api>
+  </div>
+</div>
