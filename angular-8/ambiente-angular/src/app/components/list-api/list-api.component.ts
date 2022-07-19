@@ -9,7 +9,7 @@ import { ListService } from 'src/app/shared/services/list.service';
 })
 export class ListApiComponent implements OnInit {
 
-  personagens = [];
+  personagens: Array<any> = [];
 
   constructor(private listService: ListService) { }
 
