@@ -1,0 +1,45 @@
+<!-- Interpotação -->
+<h3>{{ text }}</h3>  
+<h3>{{ retornaNome() }}</h3>  
+<img src="{{ imgUrl }}">
+
+<!-- Property Binding -->
+<img [src]="imgUrl" [alt]="imgDesc">
+<hr>
+
+<!-- Event Binding -->
+<!-- <button class="btn btn-primary" (click)="clicou()">Clique aqui</button> -->
+<input #input (keyup)="clicou(input.value)">
+{{ input.value }}
+<hr>
+
+<!-- Criando atributo e atribuindo valor de forma dinâmica -->
+<button [attr.aria-label]="btnText" class="btn btn-danger">{{btnText}}</button>
+<hr>
+
+<!-- Binding de classes -->
+<h1 [class.text-red]="textRed">{{ text }}</h1>
+<button class="btn btn-outline-danger" (click)="clicou2()"> clique e troque a cor</button>
+<hr>
+
+<!-- Binding de style -->
+<button [style.backgroundColor]="bgColor">click aqui</button>
+<hr>
+
+<!-- Two-Way data Binding -->
+<input type="text" class="form-control" [(ngModel)]="textInput">
+<p class="text-default">{{ textInput}}</p>
+<hr>
+
+<!-- TRANSFERINDO DADOS ENTRE COMPONENTS -->
+<app-button [btnText]="'Cancelar'" [btnType]="'btn-success'"></app-button>
+<app-button [btnText]="'Salvar'" [btnType]="'btn-success'"></app-button>
+<app-button btnText="Ir" btnType="btn-primary'"></app-button>
+<app-button btnText="Voltar" btnType="btn-warning"></app-button>
+
+<br>
+<br>
+<app-button></app-button>
+<br>
+<br>
+<app-button [btnType]="'btn-danger'"></app-button>
