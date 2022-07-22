@@ -14,6 +14,8 @@ export class DataBindingComponent implements OnInit {
   textRed = false;
   bgColor = 'blue';
   textInput = '';
+  number = 0;
+  destroi = false;
 
   constructor() { }
 
@@ -31,5 +33,18 @@ export class DataBindingComponent implements OnInit {
   clicou2() {
     this.textRed = true;
   };
+
+  clicouNoFilho(text:string) {
+    console.log(text)
+  }
+
+  incremento() {
+    this.number++;
+  }
+
+  destroiComponente(){
+    this.destroi = true;
+    console.log('Destruído');
+  }
 
 }

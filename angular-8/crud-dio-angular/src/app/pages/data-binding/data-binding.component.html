@@ -1,6 +1,6 @@
 <!-- Interpotação -->
-<h3>{{ text }}</h3>  
-<h3>{{ retornaNome() }}</h3>  
+<h3>{{ text }}</h3>
+<h3>{{ retornaNome() }}</h3>
 <img src="{{ imgUrl }}">
 
 <!-- Property Binding -->
@@ -35,7 +35,7 @@
 <app-button [btnText]="'Cancelar'" [btnType]="'btn-success'"></app-button>
 <app-button [btnText]="'Salvar'" [btnType]="'btn-success'"></app-button>
 <app-button btnText="Ir" btnType="btn-primary'"></app-button>
-<app-button btnText="Voltar" btnType="btn-warning"></app-button>
+<app-button btnText="Teste" btnType="btn-warning" (clickChildren)="clicouNoFilho($event)"></app-button>
 
 <br>
 <br>
@@ -43,3 +43,9 @@
 <br>
 <br>
 <app-button [btnType]="'btn-danger'"></app-button>
+<hr>
+<hr>
+
+<app-life-cycle [number]="number" *ngIf="!destroi"></app-life-cycle>
+<app-button btnText="number" btnType="btn btn-warning'" (click)="incremento()"></app-button>
+<app-button [btnText]="'Cancelar'" [btnType]="'btn-success'" (click)="destroiComponente()"></app-button>
