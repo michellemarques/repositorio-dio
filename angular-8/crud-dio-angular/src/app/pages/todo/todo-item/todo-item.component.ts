@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/app/models/todo';
 
 @Component({
@@ -7,25 +7,28 @@ import { Todo } from 'src/app/models/todo';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-
-  @Input() todo: Todo {
-    id: 0, 
+  @Input() todo: Todo =  {
+    id: 0,
     title: '',
-    done: false
+    done: false,
   };
-
+  @Output() remove = new EventEmitter;
   done = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-  };
+  }
 
-  removeTodo(): void {
-    console.log(this.todo)
-  };
+  removeTodo():void {
+    this.remove.emit(this.todo);
+  }
 
-  markAsDone(): void {
-   this.done = true;
-  };
+  markAsDone():void {
+    this.done = true;
+  }
+
 }
+
+
